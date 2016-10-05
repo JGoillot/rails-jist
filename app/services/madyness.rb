@@ -19,9 +19,17 @@ class Madyness < ServiceBase
 
     xml_doc.search('item').each do |article|
 
-      puts article.xpath('dc:creator').text
-      p "-" * 60
 
+      full_name = article.xpath('dc:creator').text
+      full_name.split(" ")
+
+      journalist_data = {
+        first_name: full_name.split(" ")[0],
+        last_name: full_name.split(" ")[1],
+        company: "Madyness"
+      }
+
+      Journalist.create(journalist_data)
     end
 
   end
