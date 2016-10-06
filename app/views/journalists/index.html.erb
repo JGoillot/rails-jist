@@ -1,2 +1,8 @@
-<h1>Journalists#index</h1>
-<p>Find me in app/views/journalists/index.html.erb</p>
+<h1>Journalists index</h1>
+
+<% @journalists.each do |journalist| %>
+  <%= journalist.first_name %>
+  <% if current_user %>
+    <%= link_to "favorite", journalist_personal_lists_path(journalist.id), method: :post %>
+  <% end %>
+<% end  %>

@@ -1,9 +1,10 @@
 class JournalistsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
-    words = research_params.join(" ")
-    raise
-    #@products = !(words.strip).empty? ? Product.pgsearch(words) : Product.all
-    @products = Product.all
+    words = research_params
+    #@journalists = !(words.strip).empty? ? Product.pgsearch(words) : Journalist.all
+    @journalists = Journalist.all
   end
 
   def show
