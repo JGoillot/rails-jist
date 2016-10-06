@@ -3,9 +3,12 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 .home {
+  .logo-center {
+    width: 20%;
+  }
   .nav-bar-tmp {
     height: 60px;
-    margin-bottom: 120px;
+    margin-bottom: 25px;
   }
   h2 {
     color: white;
@@ -37,7 +40,7 @@
   .actions {
     margin-top: 0px;
     position: relative;
-    top: 190px;
+    top: 100px;
     .explore_more {
       color: #6e7c8d;
       font-size: 1.40rem;
