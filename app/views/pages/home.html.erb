@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>home</h1>
+
+
+<%= simple_form_for :research, url: products_path, method: :get do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :words, label: false, placeholder: "ex : bière gironde..." %>
+  <%= f.button :submit, class: 'btn btn-primary', value: "Rechercher", data: { disable_with: "Rechercher" } %>
+<% end %>
