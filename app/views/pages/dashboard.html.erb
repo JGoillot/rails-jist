@@ -1,0 +1,5 @@
+<h1>Welcom on your dashboard</h1>
+
+<% @journalists.each do |journalist| %>
+  <%= link_to journalist.first_name, journalist %>
+<% end %>

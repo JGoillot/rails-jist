@@ -1,8 +1,14 @@
 <h1>Journalists index</h1>
 
+<ul>
 <% @journalists.each do |journalist| %>
+  <li>
   <%= journalist.first_name %>
-  <% if current_user %>
+  <% if current_user && current_user.journalists.include?(journalist) %>
+    <p>Appartient déjà ta liste bolosse!</p>
+  <% else %>
     <%= link_to "favorite", journalist_personal_lists_path(journalist.id), method: :post %>
   <% end %>
+  </li>
 <% end  %>
+</ul>

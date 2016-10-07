@@ -2,12 +2,17 @@ class JournalistsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    words = research_params
+    words = session[:words]
     #@journalists = !(words.strip).empty? ? Product.pgsearch(words) : Journalist.all
-    @journalists = Journalist.all
+    @journalists = current_user ? Journalist.all : Journalist.all[0...3]
   end
 
   def show
+  end
+
+  def research
+    session[:words] = research_params[:words]
+    redirect_to journalists_path
   end
 
   private
