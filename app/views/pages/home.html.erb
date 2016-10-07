@@ -1,8 +1,32 @@
-<h1>home</h1>
+<div class="home">
+<div class="nav-bar-tmp"></div>
+  <div class="container">
+    <div class="text-center">
+    <%= image_tag "jist.png", class: "logo-center" %>
+      <h2>Oubliez les agences de RP, trouvez et pitchez<br>
+      les journalistes les plus pertinents</h2>
+    </div>
+
+    <div class="search-tool">
+      <div class="search-engine">
+        <%= simple_form_for :research, url: journalists_path, method: :get do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :words, label: false, placeholder: "Entrez un mot clée pour décrire votre startup", class: "form-control" %>
+          <%= f.button :submit, class: 'btn btn-primary', value: "Trouvez", data: { disable_with: "Trouvez" } %>
+        <% end %>
+      </div>
+      <div class="example_search">ex.&nbsp;
+        <span class="keyword"><a class="js-keyword" href="#">FinTech</a></span>,&nbsp;
+        <span class="keyword"><a class="js-keyword" href="#">IoT</a></span>,&nbsp;
+        <span class="keyword"><a class="js-keyword" href="#">Blablacar</a></span>,&nbsp;
+      </div>
+    </div>
+    <div class="text-center">
+      <div class="actions">
+        <a class="explore_more" href="#">Découvrir<br><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<%= simple_form_for :research, url: journalists_path, method: :get do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :words, label: false, placeholder: "ex : bière gironde..." %>
-  <%= f.button :submit, class: 'btn btn-primary', value: "Rechercher", data: { disable_with: "Rechercher" } %>
-<% end %>
