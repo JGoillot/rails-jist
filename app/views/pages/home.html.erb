@@ -9,8 +9,11 @@
 
     <div class="search-tool">
       <div class="search-engine">
-        <input type="text" class="form-control" placeholder="Entrez un mot clée pour décrire votre startup">
-        <button type="submit" class="btn btn-primary">Trouvez</button>
+        <%= simple_form_for :research, url: journalists_path, method: :get do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :words, label: false, placeholder: "Entrez un mot clée pour décrire votre startup", class: "form-control" %>
+          <%= f.button :submit, class: 'btn btn-primary', value: "Trouvez", data: { disable_with: "Trouvez" } %>
+        <% end %>
       </div>
       <div class="example_search">ex.&nbsp;
         <span class="keyword"><a class="js-keyword" href="#">FinTech</a></span>,&nbsp;
@@ -25,3 +28,5 @@
     </div>
   </div>
 </div>
+
+

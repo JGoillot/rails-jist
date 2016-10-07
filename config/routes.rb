@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "dashboard" , to: "pages#dashboard", as: "dashboard"
+
+  resources :journalists, only: [:index, :show] do
+    resources :personal_lists, only: [:create, :destroy]
+  end
 end
