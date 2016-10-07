@@ -2,3 +2,53 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.home {
+  .logo-center {
+    width: 20%;
+  }
+  .nav-bar-tmp {
+    height: 60px;
+    margin-bottom: 25px;
+  }
+  h2 {
+    color: white;
+    font-family: $title-font;
+    font-weight: lighter;
+    margin: 0 auto 50px;
+  }
+  .search-tool {
+    width: 66.66667%;
+    margin-left: 17.05961%;
+    .search-engine {
+      display: flex;
+      justify-content: center;
+      .form-control {
+        border-radius: 5px;
+        margin-right: 3.57866%;
+        width: 74.10533%;
+      }
+      .btn-primary {
+        margin-right: 3.57866%;
+        width: 22.316%;
+      }
+    }
+    .example_search {
+      padding: 10px 15px;
+      color: #93a8bd;
+    }
+  }
+  .actions {
+    margin-top: 0px;
+    position: relative;
+    top: 100px;
+    .explore_more {
+      color: #6e7c8d;
+      font-size: 1.40rem;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      text-decoration: none;
+    }
+  }
+}
