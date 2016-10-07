@@ -15,6 +15,10 @@ class JournalistsController < ApplicationController
     redirect_to journalists_path
   end
 
+  def favorite
+    @journalists = current_user.journalists
+  end
+
   private
 
   def research_params

@@ -5,6 +5,5 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @journalists = current_user.journalists
   end
 end
