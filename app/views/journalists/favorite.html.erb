@@ -1,7 +1,7 @@
 <h1>Vos favoris</h1>
 
-<%= simple_form_for :selected, url: export_path, method: :post do |f| %>
+<%= simple_form_for :export, url: export_path, method: :post do |f| %>
   <%= f.error_notification %>
-    <%= f.input @journalistes, as: :check_boxes %>
-  <%= f.button :submit, class: 'btn btn-primary', value: "Trouvez", data: { disable_with: "Trouvez" } %>
+  <%=  f.input :jists, collection: @journalists.map { |j| [j.name, j.id] }, include_blank: true, as: :check_boxes, :input_html => { multiple: true }, label: false %>
+  <%= f.button :submit, class: 'btn btn-primary', value: "Exporter la liste", data: { disable_with: "Exporter la liste" } %>
 <% end %>

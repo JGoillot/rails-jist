@@ -5,4 +5,7 @@ class Journalist < ApplicationRecord
 
   validates :first_name, uniqueness: { scope: :last_name }
 
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

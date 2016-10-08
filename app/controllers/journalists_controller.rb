@@ -19,10 +19,19 @@ class JournalistsController < ApplicationController
     @journalists = current_user.journalists
   end
 
+  def export
+    @exported_jists = export_params[:jists][1..-1].map { |id| Journalist.find(id) }
+    raise
+  end
+
   private
 
   def research_params
     params.require(:research).permit(:words)
+  end
+
+  def export_params
+    params.require(:export).permit!
   end
 
 end
