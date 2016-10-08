@@ -5,7 +5,7 @@ Jist is a searchable media database. Find the most relevant journalist for your 
 ## Authors
 
 * **Jérémy Goillot** - [JGoillot](https://github.com/JGoillot/)
-* **Jonathan Serafini* - [Joz84](https://github.com/Joz84)
+* **Jonathan Serafini** - [Joz84](https://github.com/Joz84)
 
 
 
