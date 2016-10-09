@@ -30,4 +30,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
