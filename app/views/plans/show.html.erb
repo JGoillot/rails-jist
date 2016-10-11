@@ -1,0 +1,4 @@
+<h1>Plans show</h1>
+
+<p>Price: <%= humanized_money_with_symbol(@plan.price) %></p>
+<%= link_to "S'abonner", orders_path, method: :post, class: 'btn btn-primary' %>
