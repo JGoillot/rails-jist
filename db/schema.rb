@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008162847) do
+ActiveRecord::Schema.define(version: 20161011144513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,17 @@ ActiveRecord::Schema.define(version: 20161008162847) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "state"
+    t.integer  "amount_cents",    default: 0,     null: false
+    t.string   "amount_currency", default: "EUR", null: false
+    t.json     "payment"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
+  end
+
   create_table "personal_lists", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -73,6 +84,13 @@ ActiveRecord::Schema.define(version: 20161008162847) do
     t.datetime "updated_at",    null: false
     t.index ["journalist_id"], name: "index_personal_lists_on_journalist_id", using: :btree
     t.index ["user_id"], name: "index_personal_lists_on_user_id", using: :btree
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "price_cents", default: 0, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -99,6 +117,7 @@ ActiveRecord::Schema.define(version: 20161008162847) do
   add_foreign_key "articles", "journalists"
   add_foreign_key "journalist_keywords", "journalists"
   add_foreign_key "journalist_keywords", "keywords"
+  add_foreign_key "orders", "users"
   add_foreign_key "personal_lists", "journalists"
   add_foreign_key "personal_lists", "users"
 end
