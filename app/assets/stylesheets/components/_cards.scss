@@ -5,6 +5,7 @@
   border: 1px solid #dce3e6;
   padding: 24px 40px;
   display: flex;
+  margin-bottom: 15.5px;
   .jfavorite {
     position: absolute;
     right: 35px;
@@ -53,6 +54,7 @@
       font-weight: bold;
     }
     p {
+      font-size: 14px;
       .date {
         font-weight: bold;
         color: #323E42;
