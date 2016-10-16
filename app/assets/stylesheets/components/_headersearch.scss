@@ -1,9 +1,11 @@
 .header-search {
   background-color: #2C3F55;
+  background-image: url(/assets/header.png);
+  background-size: 100% auto;
   color: white;
   .seach-result {
     padding-top: 70px;
-    padding-bottom: 95px;
+    padding-bottom: 70px;
     .col-lg-7 {
       margin-left: 21%;
       .form-control {
