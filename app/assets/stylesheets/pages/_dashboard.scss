@@ -1,0 +1,16 @@
+.dashboard {
+  .title {
+    color: #13181a;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .profile {
+    background-color: #fff;
+    border-radius: .3125em;
+    border: 1px solid #dce3e6;
+    width: 90%;
+    .personal-info {
+      font-size: 20px;
+    }
+  }
+}

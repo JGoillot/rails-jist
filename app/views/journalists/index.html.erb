@@ -1,5 +1,53 @@
+<div class="header-search">
 <%= render 'shared/navbar' %>
-<h1>Journalists index</h1>
+  <div class="container">
+    <div class="seach-result">
+      <div class="row">
+        <div class="col-lg-7">
+            <input type="text" class="form-control" placeholder="Rechercher...">
+            <p class="message_found">Affichage de <span class="bold">381</span> journalistes qui ont écrit sur <span class="bold">«BITCOIN»</span>, d'abord les plus populaire</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="card-journalist">
+      <div class="jfavorite">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="jleft">
+        <%= image_tag "steve-avatar.png", class:"javatar" %>
+        <div class="text-center jbtn">
+          <button type="button" class="btn btn-primary btn-sm">Pitchez !</button>
+        </div>
+      </div>
+      <div class="jcontains">
+        <h3>Jean-Jacques Bourdin</h3>
+        <div class="l2">
+          <div>
+            <h5>Madyness.com</h5>
+          </div>
+          <div>
+            <i class="fa fa-twitter hvr-bounce-in" aria-hidden="true"></i>
+            <i class="fa fa-envelope hvr-bounce-in" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h5>Derniers Articles</h5>
+          <p>#MaddyMoney Les startups françaises ont levé près de 90 millions d’euros du 10 au 14 octobre
+          <span class="date">– 14 Oct 2016</span></p>
+          <p>#MaddyMoney Les startups françaises ont levé près de 90 millions d’euros du 10 au 14 octobre
+          <span class="date">– 14 Oct 2016</span></p>
+          <p>#MaddyMoney Les startups françaises ont levé près de 90 millions d’euros du 10 au 14 octobre
+          <span class="date">– 14 Oct 2016</span></p>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <ul>
 <% @journalists.each do |journalist| %>

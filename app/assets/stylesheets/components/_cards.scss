@@ -1,0 +1,64 @@
+.card-journalist {
+  width: 100%;
+  background-color: white;
+  border-radius: .3125em;
+  border: 1px solid #dce3e6;
+  padding: 24px 40px;
+  display: flex;
+  margin-top: 50px;
+  .jfavorite {
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    .fa {
+      font-size: 25px;
+      &:hover {
+        color: #F65429;
+      }
+    }
+  }
+  .jleft {
+    padding-right: 10px;
+    .javatar {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .jbtn {
+      margin-top: 12px;
+    }
+  }
+  .jcontains {
+    h3 {
+      font-size: 26px;
+      margin-bottom: 0px;
+    }
+    .l2 {
+      display: flex;
+      h5 {
+        color: #7f8c8d;
+        padding-right: 10.5px;
+      }
+      .fa {
+        padding-left: 5px;
+        margin-top: 8.5px;
+        color: #2E4155;
+        font-size: 20px;
+      }
+      .fa-twitter {
+        color: #1DADEA;
+      }
+    }
+    h5 {
+      font-weight: bold;
+    }
+    p {
+      font-size: 14px;
+      .date {
+        font-weight: bold;
+        color: #323E42;
+      }
+    }
+  }
+}
