@@ -1,9 +1,20 @@
+<div class="header-search">
 <%= render 'shared/navbar' %>
-<h1>Journalists index</h1>
+  <div class="container">
+    <div class="seach-result">
+      <div class="row">
+        <div class="col-lg-7">
+            <input type="text" class="form-control" placeholder="Rechercher...">
+            <p class="message_found">Affichage de <span class="bold">381</span> journalistes qui ont écrit sur <span class="bold">«BITCOIN»</span>, d'abord les plus populaire</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
 
-  <div class="col-xs-12 col-md-7">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
     <div class="card-journalist">
       <div class="jfavorite">
         <i class="fa fa-heart" aria-hidden="true"></i>
