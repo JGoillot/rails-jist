@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "== Madyness BEGIN =="
+Madyness.run
+puts "== Madyness DONE =="
+
+puts "== Presse Citron BEGIN =="
+PresseCitron.run
+puts "== Presse Citron DONE =="
+
+puts "== 1001 Startup BEGIN =="
+Mstartups.run
+puts "== 1001 Startup DONE =="
