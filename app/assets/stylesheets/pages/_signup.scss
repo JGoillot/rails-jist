@@ -1,0 +1,45 @@
+.sign-up {
+  background-color: #2C3F55;
+  background-image: url(/assets/header.png);
+  background-size: 100% auto;
+  color: #fff;
+  .sign-header {
+    padding-top: 36px;
+    h2 {
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: normal;
+      font-size: 35px;
+      padding-bottom: 40px;
+      line-height: 1.32143em;
+      margin-bottom: 0px;
+    }
+    h3 {
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 1em;
+      line-height: 1.2;
+      font-weight: normal;
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+  }
+  .form {
+    background-color: #fff;
+    border-radius: 6px;
+    margin: 0 auto 70px auto;
+    padding: 50px;
+    input {
+      padding: 0 20px;
+      line-height: 46px;
+      border-radius: 5px;
+    }
+    .b-submit {
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 21px;
+      font-weight: 600;
+      padding: 0 20px;
+    }
+  }
+}

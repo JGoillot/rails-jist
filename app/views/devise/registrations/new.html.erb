@@ -1,17 +1,34 @@
-<h2>Sign up</h2>
+<div class="sign-up">
+  <%= render 'shared/navbar' %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center sign-header">
+          <h2>Inscrivez-vous gratuitement</h2>
+          <h3>Rencontrez des journalistes en moins de 60 secondes</h5>
+        </div>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+        <div class="form">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+
+            <div class="form-inputs">
+              <%= f.input :email, label: false, required: true, autofocus: true, placeholder: 'Email' %>
+              <%= f.input :password, label: false, required: true, placeholder: 'Créer un mot de passe' %>
+              <%= f.input :password_confirmation, label: false, required: true, placeholder: 'Recopier votre mot de passe' %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "A moi les journalistes !", class: 'btn btn-primary b-submit' %>
+            </div>
+          <% end %>
+        </div>
+
+
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<%= render 'shared/footer' %>

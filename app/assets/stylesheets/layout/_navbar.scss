@@ -51,6 +51,11 @@
   border-bottom: 3px solid $brand-color;
 }
 
+.login:hover {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
 .navbar-wagon-link:focus {
   color: white;
   text-decoration: none;
