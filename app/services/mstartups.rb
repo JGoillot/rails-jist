@@ -38,7 +38,7 @@ class Mstartups < ServiceBase
       end
 
       # Article Parsing
-      p article_data = {
+      article_data = {
         title: article.xpath('title').text,
         link: article.xpath('link').text,
         writed_at: article.xpath('pubDate').text,
