@@ -1,15 +1,48 @@
-<h2>Log in</h2>
+<div class="sign-up">
+  <%= render 'shared/navbar' %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 logform">
+        <div class="text-center login-header">
+          <h2>Connectez-vous </h2>
+        </div>
+
+        <div class="form">
+
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs b-login">
+            <%= f.input :email, label: false, required: false, autofocus: true, placeholder: 'Email' %>
+            <%= f.input :password, label: false, required: false, placeholder: 'Mot de passe' %>
+          </div>
+
+          <div class="form-actions">
+            <div class="bottom logbottom">
+              <div class="forgot">
+                <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "Mot de passe oublié ?", new_password_path(resource_name) %><br />
+                <% end -%>
+              </div>
+              <div>
+                <%= f.button :submit, "Se connecter", class: 'btn btn-primary l-submit' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+        <div class="go_signup">
+          <div class="text-center">
+            <p>Pas encore inscrit ?&nbsp;
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <%= link_to "S'inscrire", new_registration_path(resource_name) %><br />
+            <% end -%></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<%= render 'shared/footer' %>
