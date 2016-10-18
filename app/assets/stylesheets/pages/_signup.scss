@@ -99,6 +99,30 @@
   }
 }
 
+.forgotmdp {
+  background-image: none;
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  .login-header {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    h2 {
+      font-size: 28px;
+      font-weight: normal;
+      padding-bottom: 0;
+    }
+    p {
+      margin: 20px auto;
+      color: #93a8bd;
+      font-size: 16px;
+    }
+  }
+  .go_signup {
+    font-weight: bolder;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
 
 
 
