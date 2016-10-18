@@ -3,6 +3,45 @@
   background-image: url(/assets/header.png);
   background-size: 100% auto;
   color: #fff;
+  .logform {
+    margin-left: 28%;
+    .b-login input {
+      background-color: white !important;
+      border-color: #d4dbe0;
+      height: 42px;
+      line-height: 42px;
+      padding: 0 20px;
+      &:focus {
+        box-shadow: inset 0 0 1px #1fcaa8;
+        border-color: #1fcaa8 !important;
+        outline: none;
+      }
+    }
+    .forgot {
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: normal;
+    }
+    .l-submit {
+      width: 170px;
+      border-color: #1fcaa8;
+    }
+    .go_signup {
+      margin-top: -38px;
+      margin-bottom: 120px;
+      color: #93a8bd;
+      font-size: 16px;
+    }
+  }
+  .login-header {
+    h2 {
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: normal;
+      font-size: 28px;
+      padding-bottom: 120px;
+      line-height: 1.32143em;
+      margin-bottom: 0px;
+    }
+  }
   .sign-header {
     padding-top: 36px;
     h2 {
@@ -41,5 +80,25 @@
       font-weight: 600;
       padding: 0 20px;
     }
+    .logbottom {
+      margin-top: 25px;
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .b-submit {
+        border-radius: 5px;
+        border: none;
+        font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        padding: 0 20px;
+      }
+    }
   }
 }
+
+
+
+
