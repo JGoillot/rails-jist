@@ -1,4 +1,5 @@
 .about-us {
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   h2 {
     font-size: 28px;
     font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -6,5 +7,87 @@
     font-weight: 300;
     padding-top: 35px;
     padding-bottom: 108px;
+  }
+}
+
+.about {
+  .header {
+      background-color: #f9fafb;
+      border-bottom: 1px solid #ebeff2;
+      padding-top: 50px;
+      padding-bottom: 40px;
+    .about__title {
+      font-size: 48px;
+      color: #232f3d;
+      font-weight: 100;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+  .about-text {
+    h3 {
+      font-size: 28px;
+      margin: 0 0 30px;
+      font-weight: bold;
+      padding-top: 80px;
+    }
+    p {
+      margin: 0 0 16px;
+      font-size: 18px;
+      line-height: 27px;
+      color: #232f3d;
+    }
+    .signature {
+      margin-top: 95px;
+      padding-bottom: 100px;
+      p {
+        color: #a1afc0;
+        font-size: 19px;
+        line-height: 18px;
+        padding-top: 20px;
+      }
+      .sign {
+        margin-left: -83px;
+        height: 120px;
+      }
+    }
+  }
+  .action {
+    background-color: #f9fafb;
+    border-top: 1px solid #ebeff2;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .button {
+      padding: 0 35px;
+    }
+    .button-bg {
+      background-color: #1fcaa8;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 1em;
+      font-weight: 600;
+      line-height: 1;
+      padding: 0 20px;
+      height: 45px;
+      line-height: 45px;
+      text-decoration: none;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      outline: none;
+      &:hover {
+        background-color: #158871;
+      }
+    }
+    .button--big {
+      height: 50px;
+      line-height: 50px;
+      font-size: 20px;
+    }
   }
 }
