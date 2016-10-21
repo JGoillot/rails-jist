@@ -1,0 +1,48 @@
+<div class="sign-up about-us">
+  <%= render 'shared/navbar' %>
+
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h2>À-Propos de Jist </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="header">
+    <div class="container">
+      <div class="text-center">
+        <p class="about__title">
+          <span>Salut!</span>
+          <span> Hello!</span>
+          <span> 你好!</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-3">
+      <%= image_tag "https://pbs.twimg.com/profile_images/726874824119713792/cOb1ZGRt.jpg", class: "about-pic" %>
+        <div class="about-text">
+          <h3>Pourquoi j'ai choisi de créer Jist ?</h3>
+          <p>I believe that startups shouldn’t hire PR agencies or outside consultants to do their press outreach. Instead startups should do their own PR and learn how to do it right.</p>
+          <p>Doing their own PR saves startups and individuals TONS of money and frustration and actually gets better stories published about them.</p>
+          <p>I built this tool because I could not find a PR tool which showed me journalists have a genuine interest in what I have to say.</p>
+          <p>My goal with JustReachOut is to show you the most relevant journalists who would no doubt be interested in your story and help you build a lasting relationship with this journalist.</p>
+          <div class="signature">
+            <%= image_tag "sign.png", class: "sign" %>
+            <p>Jérémy Goillot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="action">
+  <a class="button button-bg button--big" href="mailto:jeremy@jist.press">Dites-moi bonjour !</a>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

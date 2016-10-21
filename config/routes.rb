@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get "dashboard" , to: "pages#dashboard", as: "dashboard"
+  get "a-propos" , to: "pages#about", as: "about"
   get "research" , to: "journalists#research", as: "research"
   get "plan" , to: "plans#show", as: "plan"
   get "favorite-journalists" , to: "journalists#favorite", as: "favorite_journalists"
