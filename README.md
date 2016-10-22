@@ -11,3 +11,7 @@ Jist is a searchable media database. Find the most relevant journalist for your 
 
 
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+
+> [jeremy-goillot.com](http://jeremy-goillot.com/) &nbsp;&middot;&nbsp;
+> GitHub [@JGoillot](https://github.com/jgoillot) &nbsp;&middot;&nbsp;
+> Twitter [@JGoillot](https://twitter.com/jgoillot)
