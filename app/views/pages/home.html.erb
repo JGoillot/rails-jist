@@ -8,10 +8,16 @@
     </div>
 
     <div class="search-tool">
-      <%= simple_form_for :research, url: journalists_path, html: {class: 'form-inline'}, method: :get do |f| %>
+      <%= simple_form_for :research, url: journalists_path, method: :get do |f| %>
         <%= f.error_notification %>
-        <%= f.input :words, label: false, placeholder: "Entrez un mot clée pour décrire votre startup", class: "form-control input-lg" %>
+        <div class="form-flex">
+        <div class="left-input">
+        <%= f.input :words, label: false, placeholder: "Entrez un mot clée pour décrire votre startup", class: "form-control" %>
+        </div>
+        <div class="but-input">
         <%= f.button :submit, class: 'btn btn-primary', value: "Trouvez", data: { disable_with: "Trouvez" } %>
+        </div>
+        </div>
       <% end %>
 
       <div class="example_search">ex.&nbsp;
@@ -28,4 +34,33 @@
   </div>
 </div>
 
+<div class="press-partner">
+  <div class="container img-press">
+    <div>
+    <a href="http://mashable.france24.com/">
+    <img alt="Mashable" src="http://vignette3.wikia.nocookie.net/logopedia/images/f/fb/Mashable.svg/revision/latest?cb=20141210204659">
+    </a>
+    </div>
+    <div>
+    <a href="http://www.presse-citron.net/">
+    <img alt="Presse Citron" src="https://hellocasa.fr/wp-content/uploads/2014/11/logo-pressecitron-HD-copie-1024x527.png">
+    </a>
+    </div>
+    <div>
+    <a href="https://www.maddyness.com/">
+    <%= image_tag "maddyness.png" %>
+    </a>
+    </div>
+    <div>
+    <a href="http://www.huffingtonpost.com/lee-schneider/how-to-get-journalists-to_b_6426294.html">
+    <%= image_tag "french-web.png" %>
+    </a>
+    </div>
+    <div>
+    <a href="http://www.challenges.fr/start-up/">
+    <%= image_tag "challenges.png" %>
+    </a>
+    </div>
+  </div>
+</div>
 
