@@ -52,11 +52,11 @@
 <ul>
 <% @journalists.each do |journalist| %>
   <li>
-  <%= journalist.first_name %>
-  <% if current_user && current_user.journalists.include?(journalist) %>
-    <p>Appartient déjà ta liste bolosse!</p>
+  <%= journalist["first_name"] %>
+  <% if current_user && current_user.journalists.include?(Journalist.find(journalist["id"])) %>
+    <p>Appartient déjà à ta liste bolosse!</p>
   <% else %>
-    <%= link_to "favorite", journalist_personal_lists_path(journalist.id), method: :post %>
+    <%= link_to "favorite", journalist_personal_lists_path(journalist["id"]), method: :post %>
   <% end %>
   </li>
 <% end  %>

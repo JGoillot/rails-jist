@@ -8,7 +8,7 @@
     </div>
 
     <div class="search-tool">
-      <%= simple_form_for :research, url: journalists_path, html: {class: 'form-inline'}, method: :get do |f| %>
+      <%= simple_form_for :research, url: research_path, html: {class: 'form-inline'}, method: :get do |f| %>
         <%= f.error_notification %>
         <%= f.input :words, label: false, placeholder: "Entrez un mot clée pour décrire votre startup", class: "form-control input-lg" %>
         <%= f.button :submit, class: 'btn btn-primary', value: "Trouvez", data: { disable_with: "Trouvez" } %>
