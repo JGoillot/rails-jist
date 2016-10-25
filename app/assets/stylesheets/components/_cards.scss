@@ -8,13 +8,16 @@
   margin-top: 50px;
   .jfavorite {
     position: absolute;
-    right: 35px;
-    top: 65px;
+    right: 42px;
     .fa {
       font-size: 25px;
+      color: #232F3C;
       &:hover {
         color: #F65429;
       }
+    }
+    .facact {
+      color: #F65429;
     }
   }
   .jleft {
@@ -34,6 +37,13 @@
       font-size: 26px;
       margin-bottom: 0px;
     }
+    p a {
+      color: #7f8c8d;
+      &:hover {
+        color: $brand-color;
+        text-decoration: none;
+      }
+    }
     .l2 {
       display: flex;
       h5 {
@@ -45,6 +55,9 @@
         margin-top: 8.5px;
         color: #2E4155;
         font-size: 20px;
+        &:hover {
+          text-decoration: none;
+        }
       }
       .fa-twitter {
         color: #1DADEA;
