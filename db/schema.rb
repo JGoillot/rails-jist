@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101140211) do
+ActiveRecord::Schema.define(version: 20161101152407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,9 +65,9 @@ ActiveRecord::Schema.define(version: 20161101140211) do
   create_table "keyword_counts", force: :cascade do |t|
     t.integer  "journalist_id"
     t.integer  "keyword_id"
-    t.integer  "count"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "count",         default: 0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["journalist_id"], name: "index_keyword_counts_on_journalist_id", using: :btree
     t.index ["keyword_id"], name: "index_keyword_counts_on_keyword_id", using: :btree
   end
