@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025165808) do
+ActiveRecord::Schema.define(version: 20161101140211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,15 +39,6 @@ ActiveRecord::Schema.define(version: 20161025165808) do
     t.index ["journalist_id"], name: "index_articles_on_journalist_id", using: :btree
   end
 
-  create_table "journalist_keywords", force: :cascade do |t|
-    t.integer  "journalist_id"
-    t.integer  "keyword_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["journalist_id"], name: "index_journalist_keywords_on_journalist_id", using: :btree
-    t.index ["keyword_id"], name: "index_journalist_keywords_on_keyword_id", using: :btree
-  end
-
   create_table "journalists", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -59,6 +50,26 @@ ActiveRecord::Schema.define(version: 20161025165808) do
     t.datetime "updated_at",        null: false
     t.string   "photo_url"
     t.text     "biography"
+  end
+
+  create_table "keyword_caches", force: :cascade do |t|
+    t.integer  "journalist_id"
+    t.integer  "keyword_id"
+    t.integer  "count"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["journalist_id"], name: "index_keyword_caches_on_journalist_id", using: :btree
+    t.index ["keyword_id"], name: "index_keyword_caches_on_keyword_id", using: :btree
+  end
+
+  create_table "keyword_counts", force: :cascade do |t|
+    t.integer  "journalist_id"
+    t.integer  "keyword_id"
+    t.integer  "count"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["journalist_id"], name: "index_keyword_counts_on_journalist_id", using: :btree
+    t.index ["keyword_id"], name: "index_keyword_counts_on_keyword_id", using: :btree
   end
 
   create_table "keywords", force: :cascade do |t|
@@ -117,8 +128,10 @@ ActiveRecord::Schema.define(version: 20161025165808) do
   end
 
   add_foreign_key "articles", "journalists"
-  add_foreign_key "journalist_keywords", "journalists"
-  add_foreign_key "journalist_keywords", "keywords"
+  add_foreign_key "keyword_caches", "journalists"
+  add_foreign_key "keyword_caches", "keywords"
+  add_foreign_key "keyword_counts", "journalists"
+  add_foreign_key "keyword_counts", "keywords"
   add_foreign_key "orders", "users"
   add_foreign_key "personal_lists", "journalists"
   add_foreign_key "personal_lists", "users"

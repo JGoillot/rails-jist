@@ -1,6 +1,6 @@
 class Keyword < ApplicationRecord
-  has_many :journalist_keywords
-  has_many :journalists, through: :journalist_keywords
+  has_many :keyword_counts
+  has_many :journalists, through: :keyword_counts
 
   validates :name, uniqueness: true
 end
