@@ -5,6 +5,11 @@ class Journalist < ApplicationRecord
 
   validates :first_name, uniqueness: { scope: :last_name }
 
+  include AlgoliaSearch
+
+  algoliasearch do
+  end
+
   def name
     "#{first_name} #{last_name}"
   end
