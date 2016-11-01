@@ -1,3 +1,92 @@
+<div class="sign-up about-us dashboard-user">
+  <%= render 'shared/navbar' %>
+
+  <div class="container">
+    <h2>Hello Jérémy, </h2>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div class="title">Mon Profil</div>
+
+    <div class="profile">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="right">
+            <div class="text-center">
+              <%= image_tag "https://pbs.twimg.com/profile_images/726874824119713792/cOb1ZGRt.jpg", class: "user-img" %>
+              <div class="name">Jérémy Goillot</div>
+            </div>
+            <div class="menu">
+              <div class="about active">
+                <i class="fa fa-user-secret" aria-hidden="true"></i>
+                 Informations personnelles
+              </div>
+              <div class="jlist">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <%= link_to "Mes Journalistes", favorite_journalists_path %>
+              </div>
+              <div class="jlist">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a href="#">Mon Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="personal-info">
+            <div class="title-2">
+              Mes journalistes favoris
+            </div>
+            <div class="fav-journalist">
+              <div class="fav-left">
+                <img class="javatar" src="/assets/steve-avatar-83b84ea2817a67604378987a5d0b2ed84439942512cc3901db5decbf169ecb1f.png" alt="Steve avatar">
+              </div>
+              <div class="keywords">
+                <div>Big Data</div>
+                <div>IoT</div>
+                <div>Social Media</div>
+              </div>
+              <div class="fav-content">
+                <h3>Jean-Jacques Bourdin</h3>
+                <div class="l2">
+                  <div>
+                    <h5>Madyness.com</h5>
+                  </div>
+                  <div>
+                    <i class="fa fa-twitter hvr-bounce-in" aria-hidden="true"></i>
+                    <i class="fa fa-envelope hvr-bounce-in" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="description">
+                Je suis Charly
+              </div>
+            </div>
+
+            <div class="cta">
+                <button class="button">
+                  Mettre à jour mon profil
+                </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<%= render 'shared/footer' %>
+
+
+
 <h1>Vos favoris</h1>
 
 <%= simple_form_for :export, url: export_path, method: :post do |f| %>
