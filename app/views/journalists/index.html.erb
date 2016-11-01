@@ -45,23 +45,54 @@
           <span class="date">– 14 Oct 2016</span></p>
       </div>
     </div>
+
+  <% @journalists.each do |journalist| %>
+    <div class="card-journalist">
+       <div class="jfavorite">
+       <% if current_user && current_user.journalists.include?(journalist) %>
+        <i class="fa fa-heart facact" aria-hidden="true"></i>
+      <% else %>
+        <%= link_to journalist_personal_lists_path(journalist.id), method: :post do %>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="jleft">
+      <% if journalist.photo_url %>
+        <%= image_tag journalist.photo_url, class:"javatar" %>
+      <% else %>
+        <%= image_tag "steve-avatar.png", class:"javatar" %>
+      <% end %>
+        <div class="text-center jbtn">
+          <button type="button" class="btn btn-primary btn-sm">Pitchez !</button>
+        </div>
+      </div>
+      <div class="jcontains">
+        <h3><%= journalist.first_name %> <%= journalist.last_name %></h3>
+        <div class="l2">
+          <div>
+            <h5><%= journalist.company %></h5>
+          </div>
+          <div>
+            <%= link_to "https://twitter.com/#{journalist.twitter_user_name}", target: "_blank" do %>
+              <i class="fa fa-twitter hvr-bounce-in" aria-hidden="true"></i>
+            <% end %>
+            <i class="fa fa-envelope hvr-bounce-in" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h5>Derniers Articles</h5>
+          <p><%= link_to journalist.articles.last.title, journalist.articles.last.link, target: "_blank" %>
+          <span class="date">– <%= journalist.articles.last.writed_at %></span></p>
+          <p>#MaddyMoney Les startups françaises ont levé près de 90 millions d’euros du 10 au 14 octobre
+          <span class="date">– 14 Oct 2016</span></p>
+          <p>#MaddyMoney Les startups françaises ont levé près de 90 millions d’euros du 10 au 14 octobre
+          <span class="date">– 14 Oct 2016</span></p>
+      </div>
+    </div>
+  <% end  %>
   </div>
 
 </div>
-
-<ul>
-<% @journalists.each do |journalist| %>
-  <li>
-  <%= journalist["first_name"] %>
-  <% if current_user && current_user.journalists.include?(Journalist.find(journalist["id"])) %>
-    <p>Appartient déjà à ta liste bolosse!</p>
-  <% else %>
-    <%= link_to "favorite", journalist_personal_lists_path(journalist["id"]), method: :post %>
-  <% end %>
-  </li>
-<% end  %>
-</ul>
-
 
 <%= render 'shared/footer' %>
 
