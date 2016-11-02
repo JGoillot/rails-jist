@@ -33,7 +33,9 @@ class Mashable < ServiceBase
       # Keyword Parsing
       article.xpath('category').each do |k|
         keyword = Keyword.where(name: k.text).first_or_create
-        journalist.keywords << keyword
+        kjist = journalist.keyword_counts.find_or_create_by(keyword: keyword)
+        kjist.count += 1
+        kjist.save
       end
 
       # Article Parsing
