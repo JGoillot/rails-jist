@@ -40,35 +40,45 @@
             <div class="title-2">
               Mes journalistes favoris
             </div>
-            <div class="fav-journalist">
-              <div class="fav-left">
-                <img class="javatar" src="/assets/steve-avatar-83b84ea2817a67604378987a5d0b2ed84439942512cc3901db5decbf169ecb1f.png" alt="Steve avatar">
-              </div>
-              <div class="keywords">
-                <div>Big Data</div>
-                <div>IoT</div>
-                <div>Social Media</div>
-              </div>
-              <div class="fav-content">
-                <h3>Jean-Jacques Bourdin</h3>
-                <div class="l2">
-                  <div>
-                    <h5>Madyness.com</h5>
+
+            <div class="my-journalists">
+              <% @journalists.each do |journalist| %>
+              <div class="fav-journalist">
+                <div class="header">
+                  <div class="fav-left">
+                    <% if journalist.photo_url %>
+                      <%= image_tag journalist.photo_url, class:"javatar" %>
+                    <% else %>
+                      <%= image_tag "steve-avatar.png", class:"javatar" %>
+                    <% end %>
                   </div>
-                  <div>
-                    <i class="fa fa-twitter hvr-bounce-in" aria-hidden="true"></i>
-                    <i class="fa fa-envelope hvr-bounce-in" aria-hidden="true"></i>
+                  <div class="keywords">
+                    <span class="tag">IoT</span>
+                    <span class="tag">Big Data</span>
+                  </div>
+                </div>
+                <div class="fav-content">
+                  <h3><%= journalist.first_name %> <%= journalist.last_name %></h3>
+                  <div class="l2">
+                    <div>
+                      <h5><%= journalist.company %></h5>
+                    </div>
+                    <div>
+                      <i class="fa fa-twitter hvr-bounce-in" aria-hidden="true"></i>
+                      <i class="fa fa-envelope hvr-bounce-in" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="description">
+                    <%= journalist.biography %>
                   </div>
                 </div>
               </div>
-              <div class="description">
-                Je suis Charly
-              </div>
+              <% end %>
             </div>
 
             <div class="cta">
                 <button class="button">
-                  Mettre à jour mon profil
+                  Exporter la liste
                 </button>
             </div>
 

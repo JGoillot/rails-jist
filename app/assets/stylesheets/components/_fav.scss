@@ -1,11 +1,109 @@
-.fav-journalist {
-  width: 25%;
-  border-radius: .3125em;
-  border: 1px solid #dce3e6;
-  .fav-left {
+.my-journalists {
+  .fav-journalist {
+    // width: 25%;
+    border-radius: .3125em;
+    border: 1px solid #dce3e6;
+    padding: 13px 15px;
+    width: 45%;
+    background-color: #F5F8FA;
+    margin-bottom: 15px;
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .fav-left {
+        height: 70px;
+        width: 70px;
+        img {
+          border-radius: 5px;
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .keywords {
+        .tag{
+          display: inline-block;
+          background: #43C7A8;
+          color: #FFF;
+          padding: 4px 10px;
+          margin: 2px 2px 2px 20px;
+          font: normal 12px sans-serif;
+          position: relative;
+          cursor: default;
+          box-shadow:1px 1px 0 rgba(0,0,0,.2);
+          -webkit-transform-origin:0% 50%;
+          -webkit-animation: swing 1s;
+          -o-animation: swing 1s;
+          animation: swing 1s ;
+        }
 
-  }
-  .keywords {
+        .tag:before{
+          content: "";
+          position: absolute;
+          width: 0;
+          background: inherit;
+          height: 22px;
+          border: 10px solid #fafafa;
+          border-right-color: transparent;
+          border-radius: 10px 0 0 10px;
+          left: -20px;
+          top: 0;
+        }
 
+        .tag:after{
+          content: "";
+          width: 6px;
+          height: 6px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          background: #FFF;
+          position: absolute;
+          left: -1px;
+          top: 8.4px;
+          box-shadow:inset 1px 1px 0 #CCC;
+        }
+      }
+    }
+    .fav-content {
+      h3 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      .l2 {
+        display: flex;
+        margin-top: -10px;
+        padding-left: 10px;
+        h5 {
+          color: #7f8c8d;
+          padding-right: 10.5px;
+        }
+        .fa {
+          padding-left: 5px;
+          margin-top: 6.5px;
+          color: #2E4155;
+          font-size: 15px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .fa-twitter {
+          color: #1DADEA;
+        }
+      }
+      .description {
+        color: #66757f;
+        font-weight: 400;
+        word-wrap: break-word;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 1.375em;
+        height: 5.5em;
+        margin-top: 5px;
+      }
+    }
   }
 }
