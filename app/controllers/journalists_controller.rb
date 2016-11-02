@@ -4,7 +4,7 @@ class JournalistsController < ApplicationController
   def index
     words = session[:words]
     #@journalists = !(words.strip).empty? ? Product.pgsearch(words) : Journalist.all
-    @journalists = current_user ? Journalist.all : Journalist.all[0...3]
+    @journalists = current_user ? Journalist.raw_search(words)["hits"] : Journalist.raw_search(words)["hits"][0...3]
   end
 
   def show
