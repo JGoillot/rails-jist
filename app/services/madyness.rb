@@ -26,7 +26,7 @@ class Madyness < ServiceBase
       journalist_data = {
         first_name: full_name.split(" ")[0],
         last_name: full_name.split(" ")[1],
-        company: "Maddyness"
+        company: "Madyness"
       }
       journalist = Journalist.where(journalist_data).first_or_create
 
