@@ -18,3 +18,7 @@ puts "== Presse Citron DONE =="
 puts "== 1001 Startup BEGIN =="
 Mstartups.run
 puts "== 1001 Startup DONE =="
+
+puts "== Mashable BEGIN =="
+Mashable.run
+puts "== Mashable DONE =="
